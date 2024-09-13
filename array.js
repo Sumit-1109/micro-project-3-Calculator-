@@ -48,9 +48,15 @@ keys.forEach(key=>{
                     disp.push(key.textContent);
                 }
             } else if (key.id === '.') {
-                let lastNumber = disp.join('').split(/[\+\-\*\/]/).pop();
+                let lastNumber = disp.join('').split(/[\+\-\x\/]/).pop();
                 if (!lastNumber.includes('.')) {
-                    disp.push(key.textContent);
+                    if (disp.length!=0 && ['1','2','3','4','5','6','7','8','9','0'].includes(disp[disp.length-1]) ){
+                        disp.push(key.textContent);
+                    }else {
+                        disp.push('0');
+                        disp.push(key.textContent);
+
+                    }
                 }
             } else {
                 disp.push(key.textContent);
