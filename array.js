@@ -21,6 +21,7 @@ keys.forEach(key=>{
             } else if(key.id==='isequal'){
                 try{
                     let result=eval(disp.join('').replace(/x/g,'*'));
+                    result=parseFloat(result.toFixed(3));
                     disp=(Array.from(result.toString()));
                 } catch{
                     disp.splice(0,disp.length,'EXPRESSION ERROR');

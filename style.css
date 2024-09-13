@@ -24,7 +24,7 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    min-width: 400px;
+    min-width: 300px;
     width: 35vw;
     min-height: 475px;
     height: 45vh;
@@ -118,4 +118,15 @@ body{
 }
 .delete:active{
     background-color: rgb(65, 79, 117);
+}
+
+@media screen and (min-width: 1900px) {
+    .main{
+        width: 35vw;
+        height: 70vh;
+    }
+    html {
+        font-size: 40px;
+    }
+    
 }
